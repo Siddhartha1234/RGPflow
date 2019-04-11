@@ -61,13 +61,13 @@ class RGP_Base(Model):
         for i in range(self.nLayers - 1, -1, -1):
             if i == self.nLayers - 1:
                 self.layers.append(SVGP_Layer(
-                    X=self.X[i - 1], X_win=self.window_lengths[i], U=self.U, U_win=self.U_win))
+                    X=self.X[i - 1], X_win=self.window_lengths[i], U=self.U, U_win=self.U_win, likelihood=self.likelihood))
             elif i == 0:
                 self.layers.append(SVGP_Layer(
-                    X=self.Y, X_win=self.window_lengths[i], U=self.X[i], U_win=self.window_lengths[i + 1]))
+                    X=self.Y, X_win=self.window_lengths[i], U=self.X[i], U_win=self.window_lengths[i + 1], likelihood=self.likelihood))
             else:
                 self.layers.append(SVGP_Layer(
-                    X=self.X[i - 1], X_win=self.window_lengths[i], U=self.X[i], U_win=self.window_lengths[i + 1]))
+                    X=self.X[i - 1], X_win=self.window_lengths[i], U=self.X[i], U_win=self.window_lengths[i + 1], likelihood=self.likelihood))
 
         self.layers = ParamList(self.layers)
 
