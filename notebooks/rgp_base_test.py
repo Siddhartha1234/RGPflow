@@ -6,7 +6,7 @@
 from RGP.rgp import RGP_Base
 from scipy import io
 from gpflow.likelihoods import Gaussian
-from gpflow.train import AdamOptimizer
+from gpflow.training import ScipyOptimizer
 import os
 os.environ['CUDA_VISIBLE_DEVICES']=""
 
@@ -54,7 +54,7 @@ session = m.enquire_session()
 global_step = mon.create_global_step(session)
 
 with mon.Monitor([print_task],session, global_step, print_summary=True) as monitor:
-    AdamOptimizer(0.01).minimize(m, step_callback=monitor, maxiter=100, global_step=global_step)
+    ScipyOptimizer().minimize(m, step_callback=monitor, maxiter=2000, global_step=global_step)
 
 
 
