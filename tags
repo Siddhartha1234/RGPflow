@@ -1,0 +1,38 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/54c1c2b8/
+RGP_Base	RGP/rgp.py	/^class RGP_Base(Model):$/;"	c
+RGPflow	README.md	/^# RGPflow$/;"	c
+SVGPLayer	RGP/layers.py	/^class SVGPLayer(Parameterized):$/;"	c
+__init__	RGP/layers.py	/^    def __init__(self, X, X_win, U, U_win, likelihood, kern, num_classes, **kwargs):$/;"	m	class:SVGPLayer
+__init__	RGP/rgp.py	/^    def __init__($/;"	m	class:RGP_Base
+_build_likelihood	RGP/rgp.py	/^    def _build_likelihood(self):$/;"	m	class:RGP_Base
+_build_predict	RGP/rgp.py	/^    def _build_predict(self, U_seq):$/;"	m	class:RGP_Base
+_init_conv	RGP/layers.py	/^    def _init_conv(self):$/;"	m	class:SVGPLayer
+_init_data	RGP/rgp.py	/^    def _init_data(self, U, Y):$/;"	m	class:RGP_Base
+_init_layers	RGP/rgp.py	/^    def _init_layers(self):$/;"	m	class:RGP_Base
+_init_model	RGP/layers.py	/^    def _init_model(self):$/;"	m	class:SVGPLayer
+_init_params	RGP/rgp.py	/^    def _init_params(self, init, X_var):$/;"	m	class:RGP_Base
+data	notebooks/rgp_base_test.py	/^data = io.loadmat('.\/notebooks\/identificationExample.mat')$/;"	v
+data_in	notebooks/rgp_base_test.py	/^data_in = data['u'][:,None]$/;"	v
+data_in_test	notebooks/rgp_base_test.py	/^data_in_test = data_in[150:]$/;"	v
+data_in_train	notebooks/rgp_base_test.py	/^data_in_train = data_in[:150]$/;"	v
+data_out	notebooks/rgp_base_test.py	/^data_out = data['y'][:,None]$/;"	v
+data_out_test	notebooks/rgp_base_test.py	/^data_out_test = data_out[150:]$/;"	v
+data_out_train	notebooks/rgp_base_test.py	/^data_out_train = data_out[:150]$/;"	v
+float_type	RGP/rgp.py	/^float_type = settings.float_type$/;"	v
+kern	notebooks/rgp_base_test.py	/^kern = gpflow.kernels.Matern32(input_dim=1, variance=10., lengthscales=2.)$/;"	v
+kernels	notebooks/rgp_base_test.py	/^kernels = [kern]*2$/;"	v
+likelihood	notebooks/rgp_base_test.py	/^likelihood = Gaussian()$/;"	v
+m	notebooks/rgp_base_test.py	/^m = RGP_Base(U=data_in_train, Y=data_out_train, likelihood=likelihood, kernels=kernels, X_win=wi/;"	v
+np	RGP/layers.py	/^import numpy as np$/;"	I
+np	RGP/rgp.py	/^import numpy as np$/;"	I
+sliding_window_transform	RGP/utils.py	/^def sliding_window_transform(arr, win):$/;"	f
+tf	RGP/layers.py	/^import tensorflow as tf$/;"	I
+tf	RGP/rgp.py	/^import tensorflow as tf$/;"	I
+win_in	notebooks/rgp_base_test.py	/^win_in = int(data['lu'])$/;"	v
+win_out	notebooks/rgp_base_test.py	/^win_out = int(data['ly'])$/;"	v
