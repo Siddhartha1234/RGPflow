@@ -1,2 +1,2 @@
 # RGPflow
-RGP using gpflow
+Recurrent Gaussian process using Tensorflow
